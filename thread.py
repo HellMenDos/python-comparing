@@ -2,7 +2,7 @@ import requests
 import random
 import os 
 from threading import Thread
-import time
+
 def download(url,id):
     file_name=os.path.basename(url)+str(round(random.random() * (100 + id)))+'.jpg'
     with requests.get(url, stream=True) as response: 
